@@ -13,13 +13,14 @@ LOREM = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         "velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint " \
         "occaecat cupidatat non proident, sunt in culpa qui officia deserunt " \
         "mollit anim id est laborum."
+LOREM_ARR = LOREM.split.freeze
 
 100.times do |idx|
   article = Article.create!(title: "#{idx} title", body: LOREM, status: "public")
   rand(0..10).times do
     article.comments.create!(
       commenter: SecureRandom.hex(4),
-      body: "Lorem ipsum " * rand(1..5),
+      body: LOREM_ARR[0..rand(1..8)].join(" ") * rand(1..3),
       status: "public"
     )
   end
