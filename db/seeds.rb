@@ -15,8 +15,12 @@ LOREM = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         "mollit anim id est laborum."
 
 100.times do |idx|
-  article = Article.create!(title: "#{idx} title", body: LOREM)
+  article = Article.create!(title: "#{idx} title", body: LOREM, status: "public")
   rand(0..10).times do
-    article.comments.create!(commenter: SecureRandom.hex(4), body: "Lorem ipsum " * rand(1..5))
+    article.comments.create!(
+      commenter: SecureRandom.hex(4),
+      body: "Lorem ipsum " * rand(1..5),
+      status: "public"
+    )
   end
 end
