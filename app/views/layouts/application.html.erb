@@ -11,6 +11,11 @@
   </head>
 
   <body>
+    <nav class="container">
+      <ul class="nav">
+        <li class="nav-item"><%= link_to "Main", articles_path, class: "nav-link" %></li>
+      </ul>
+    </nav>
     <main class="container">
       <%= yield %>
     </main>
