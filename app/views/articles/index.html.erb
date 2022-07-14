@@ -4,9 +4,14 @@
   Our blog has <%= Article.public_count %> articles and counting!
 </p>
 
+<%= form_with url: articles_path, method: :get, class: "mb-2" do |form| %>
+  <%= form.text_field :title %>
+  <%= form.submit "Search" %>
+<% end %>
+
 <%= link_to "New Article", new_article_path %>
 
-<ul>
+<ul class="mt-2">
   <% @articles.each do |article| %>
     <% unless article.archived? %>
       <li>
