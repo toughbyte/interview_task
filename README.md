@@ -21,6 +21,9 @@ $ npm install
 # Set up a database
 $ bin/rails db:reset
 
+# Run asset watching and building in the separate console
+$ bin/front
+
 # Run the server and access it on http://localhost:3000
-$ bin/dev
+$ rails s
 ```
