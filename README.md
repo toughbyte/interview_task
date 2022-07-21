@@ -5,7 +5,7 @@ for version 7.0.3.
 
 Requirements:
 - Ruby v3.1.2
-- Node v14+
+- Node v16+
 - SQLite 3 any version
 
 
