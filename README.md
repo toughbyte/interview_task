@@ -3,10 +3,15 @@
 This is a basic Rails application which was created using a ["Getting started" Rails tutorial](https://guides.rubyonrails.org/getting_started.html)
 for version 7.0.3.
 
+Please install it and make sure that it runs. You can install any additional
+Ruby gems or JavaScript libraries if you need to.
+
+## Installation
+
 Requirements:
 - Ruby v3.1.2
 - Node v16+
-- SQLite 3 any version
+- SQLite3
 
 
 ```
